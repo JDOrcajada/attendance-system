@@ -9,7 +9,7 @@
     "build": "vite build",
     "start": "electron .",
     "generate-icon": "node scripts/generate-icon.js",
-    "electron:dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "electron:dev": "wait-on http://localhost:5174 && electron .",
     "electron:build": "npm run generate-icon && npm run build && electron-builder"
   },
   "build": {

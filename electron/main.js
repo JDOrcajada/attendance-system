@@ -1,7 +1,7 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
 
-const isDev = process.env.NODE_ENV === "development";
+const isDev = !app.isPackaged;
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
@@ -18,7 +18,7 @@ function createWindow() {
   });
 
   if (isDev) {
-    mainWindow.loadURL("http://localhost:5173");
+    mainWindow.loadURL("http://localhost:5174");
     // Uncomment to open devtools automatically during development
     // mainWindow.webContents.openDevTools({ mode: "detach" });
   } else {

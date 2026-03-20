@@ -16,14 +16,6 @@ export interface AttendanceRecord {
   site?: string;
 }
 
-export const employees: Employee[] = [
-  { id: "EMP001", name: "JUAN DELA CRUZ", department: "Engineering" },
-  { id: "EMP002", name: "MARIA SANTOS", department: "Human Resources" },
-  { id: "EMP003", name: "PEDRO GARCIA", department: "Sales" },
-  { id: "EMP004", name: "ANNA REYES", department: "Engineering" },
-  { id: "EMP005", name: "JOSE CRUZ", department: "Marketing" },
-];
-
 // Helper function to get attendance storage
 export function getAttendanceStorage(): AttendanceRecord[] {
   const stored = localStorage.getItem('attendance_records');
