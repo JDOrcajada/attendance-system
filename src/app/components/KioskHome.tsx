@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { QrCode, User } from "lucide-react";
 import logoImage from "../../assets/logo.png";
+import { KIOSK_API_BASE } from '../../imports/api';
 
-const API = "http://localhost:5000/api/kiosk";
+const API = KIOSK_API_BASE;
 
 interface EmployeeInfo {
   id: number;
@@ -170,8 +171,6 @@ export function KioskHome() {
       setErrorMsg("Cannot reach server. Check your connection.");
     }
   };
-
-  const validate12HourTime = (_value: string) => false; // unused — kept to avoid reference errors
 
   const handleSaveSchedule = async () => {
     if (!onsiteEmployeeId.trim() || !onsiteSite.trim()) {
