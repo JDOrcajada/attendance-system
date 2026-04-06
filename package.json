@@ -27,6 +27,13 @@
     "win": {
       "target": "nsis",
       "icon": "logo"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Attendance Kiosk"
     }
   },
   "dependencies": {
